@@ -8,6 +8,14 @@ export const Home: React.FC = () => {
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setIndex(newValue);
   };
+  if (typeof window !== 'undefined') {
+    document.addEventListener('customEvent', function (event) {
+      //@ts-ignore
+      const data = event.detail;
+      console.log(data);
+    });
+  }
+
   return (
     <div>
       <AppBarComponent index={index} handleChange={handleChange} />

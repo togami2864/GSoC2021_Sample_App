@@ -1,0 +1,1 @@
+(()=>{"use strict";chrome.runtime.onMessage.addListener((function(e,t,n){document.dispatchEvent(new CustomEvent("customEvent",{detail:e})),n("ok")}))})();
