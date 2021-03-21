@@ -1,3 +1,4 @@
+const CopyPlugin = require('copy-webpack-plugin');
 /**
  * @type import("webpack").Configuration
  */
@@ -19,4 +20,5 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
+  plugins: [new CopyPlugin([{ from: './public', to: './' }])],
 };
