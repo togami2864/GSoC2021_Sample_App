@@ -11,7 +11,7 @@
   "content_scripts": [
     {
       "run_at":"document_end",
-      "matches": ["https://togami2864.github.io/GSoC2021_sample/"],
+      "matches": ["http://localhost:3000/"],
       "js": ["./content.js"]
     }
   ]

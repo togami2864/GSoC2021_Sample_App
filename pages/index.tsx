@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { AppBarComponent } from '../components/AppBar';
 import { TabPanel } from '../components/TabPanel';
@@ -8,13 +8,14 @@ export const Home: React.FC = () => {
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setIndex(newValue);
   };
-  useEffect(() => {
+  if (typeof window !== 'undefined') {
     document.addEventListener('customEvent', function (event) {
       //@ts-ignore
       const data = event.detail;
-      alert(data);
+      console.log(data);
     });
-  }, []);
+  }
+
   return (
     <div>
       <AppBarComponent index={index} handleChange={handleChange} />

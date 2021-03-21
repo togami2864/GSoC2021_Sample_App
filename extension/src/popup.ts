@@ -57,10 +57,10 @@ const fetchAPI = () => {
 };
 
 const startTimer = () => {
-  Interval = setInterval(fetchAPI, 5000);
+  Interval = setInterval(fetchAPI, 30000);
 };
 
-window.addEventListener('onload', () => {
+window.addEventListener('load', () => {
   fetchAPI();
   startTimer();
 });
