@@ -1,0 +1,18 @@
+{
+  "manifest_version":2,
+  "name": "Sample Extension",
+  "version": "1.0.0",
+  "description": "This is sample extension for GSoC2021 at Chromium",
+  "permissions": ["tabs","system.cpu","system.memory"],
+  "browser_action": {
+    "default_title": "ChromeMemo",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "run_at":"document_end",
+      "matches": ["https://togami2864.github.io/GSoC2021_sample/"],
+      "js": ["content.js"]
+    }
+  ]
+}
