@@ -1,0 +1,13 @@
+{
+    "name":             "Sample Diagnostics App for Chrome OS",
+    "short_name":       "GSoC2021",
+    "description":      "This is sample application for GSoC2021 at Chromium.",
+    "start_url":        "/",
+    "display":          "standalone",
+    "icons": [
+    {
+      "src": "./icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }]
+}
