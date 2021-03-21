@@ -20,5 +20,9 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
-  plugins: [new CopyPlugin([{ from: './public', to: './' }])],
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: './public', to: './' }],
+    }),
+  ],
 };
